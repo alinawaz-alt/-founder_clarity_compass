@@ -72,10 +72,8 @@ const DiagnosticPage = () => {
       if (currentQuestion?.affirmation) {
         showSuccess(currentQuestion.affirmation);
       }
-      setTimeout(() => {
-        setCurrentQuestionIndex((prev) => prev + 1);
-        setSelectedAnswer(null);
-      }, 1500); // Delay for 1.5 seconds to allow toast to be read
+      setCurrentQuestionIndex((prev) => prev + 1);
+      setSelectedAnswer(null);
     } else {
       // All questions answered, generate report
       showSuccess("Diagnostic complete! Generating your personalized report...");
