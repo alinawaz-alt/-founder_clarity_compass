@@ -77,28 +77,12 @@ const ReportPage = () => {
           </div>
         </CardContent>
         <CardFooter className="flex flex-col md:flex-row justify-center gap-4 p-6">
-          {report.ctaType === "consult" ? (
             <Button
-              onClick={handleBookConsult}
+              onClick={handleStartNewDiagnostic}
               className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-purple-800 text-white font-semibold py-3 px-8 rounded-full text-lg w-full md:w-auto shadow-lg transform transition-all duration-300 hover:scale-105"
             >
-              Book a Consult
+              Start New Diagnostic
             </Button>
-          ) : (
-            <Button
-              onClick={handleJoinList}
-              className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-purple-800 text-white font-semibold py-3 px-8 rounded-full text-lg w-full md:w-auto shadow-lg transform transition-all duration-300 hover:scale-105"
-            >
-              Join Our Exclusive List
-            </Button>
-          )}
-          <Button
-            onClick={handleStartNewDiagnostic}
-            variant="ghost"
-            className="text-blue-700 hover:text-blue-800 font-semibold py-3 px-8 rounded-full text-lg w-full md:w-auto"
-          >
-            Start New Diagnostic
-          </Button>
         </CardFooter>
       </Card>
       <MadeWithDyad />
