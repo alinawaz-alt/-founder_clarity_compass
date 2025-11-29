@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { API_BASE_URL } from "@/services/api";
 
 interface HealthResponse {
   status: string;
@@ -13,7 +14,7 @@ export const BackendHealthIndicator = () => {
   useEffect(() => {
     const checkHealth = async () => {
       try {
-        const response = await fetch("/api/v1/healthz");
+        const response = await fetch(`${API_BASE_URL}/api/v1/healthz`);
         if (response.ok) {
           const data: HealthResponse = await response.json();
           if (data.status === "ok" && data.db === "connected") {

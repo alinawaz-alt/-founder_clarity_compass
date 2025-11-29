@@ -1,6 +1,6 @@
 import { Answer, CompanySize, Report } from "../types/diagnostic";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+export const API_BASE_URL = "https://fcc-backend-4p6i.onrender.com";
 
 interface StartDiagnosticResponse {
   session_id: string;

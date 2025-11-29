@@ -9,8 +9,9 @@ export default defineConfig(() => ({
     port: 5137,
     proxy: {
       "/api": {
-        target: "http://127.0.0.1:8000",
+        target: "https://fcc-backend-4p6i.onrender.com",
         changeOrigin: true,
+        secure: false,
       },
     },
   },
